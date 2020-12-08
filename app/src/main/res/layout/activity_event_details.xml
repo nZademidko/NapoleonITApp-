@@ -4,25 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context=".MainActivity">
+    android:background="@color/colorRed"
+    tools:context=".EventDetailsActivity">
 
+
+    <TextView
+        android:id="@+id/textView2"
+        android:textColor="@color/colorWhite"
+        android:textSize="25sp"
+        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Просмотр и редактирование мероприятия"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:ems="10"
-        android:gravity="center"
-        android:hint="Название мероприятия"
         android:inputType="textPersonName"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
+        android:hint="Название мероприятия"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/etDate"
@@ -56,27 +68,14 @@
         app:layout_constraintTop_toBottomOf="@+id/etDate" />
 
     <Button
-        android:id="@+id/btnToNextActivity"
+        android:id="@+id/btnBackTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="41dp"
-        android:text="Перейти"
+        android:text="Назад"
+        android:textColor="@color/colorRed"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCount" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:textColor="@color/colorWhite"
-        android:textSize="25sp"
-        android:layout_marginTop="80dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Добавление мероприятия"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
