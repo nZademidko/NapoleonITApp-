@@ -1,34 +1,23 @@
-package com.example.napoleonitapp.ui
+package com.example.napoleonitapp.features.details
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
-import com.example.napoleonitapp.EventDataClass
+import com.example.napoleonitapp.data.Event
 import com.example.napoleonitapp.R
 import kotlinx.android.synthetic.main.fragment_event_details.*
+import moxy.MvpAppCompatFragment
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [EventDetailsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class EventDetailsFragment : Fragment(R.layout.fragment_event_details) {
+class EventDetailsFragment : MvpAppCompatFragment(R.layout.fragment_event_details), DetailsView {
 
     companion object {
         private var EVENT = "EVENT"
 
         @JvmStatic
-        fun newInstance(event: EventDataClass) =
+        fun newInstance(event: Event) =
             EventDetailsFragment().apply {
                 arguments = Bundle().apply {
                     putParcelable(EVENT, event)
@@ -42,7 +31,7 @@ class EventDetailsFragment : Fragment(R.layout.fragment_event_details) {
 
 
         arguments?.let {
-            val event = it.getParcelable<EventDataClass>(EVENT)
+            val event = it.getParcelable<Event>(EVENT)
 
             Glide.with(this)
                 .load(event?.eventImageView)
