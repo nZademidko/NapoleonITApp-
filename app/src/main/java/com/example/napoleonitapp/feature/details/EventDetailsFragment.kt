@@ -1,7 +1,6 @@
-package com.example.napoleonitapp.features.details
+package com.example.napoleonitapp.feature.details
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.View
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -11,7 +10,7 @@ import kotlinx.android.synthetic.main.fragment_event_details.*
 import moxy.MvpAppCompatFragment
 
 
-class EventDetailsFragment : MvpAppCompatFragment(R.layout.fragment_event_details), DetailsView {
+class EventDetailsFragment : MvpAppCompatFragment(R.layout.fragment_event_details), EventDetailsView {
 
     companion object {
         private var EVENT = "EVENT"

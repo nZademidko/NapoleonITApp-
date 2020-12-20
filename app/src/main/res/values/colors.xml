@@ -8,6 +8,6 @@
     <color name="colorBackgroundPurple">#7318F6</color>
     <color name="colorBlack">#000000</color>
     <color name="colorPurple">#8b00ff</color>
-    <color name="colorStartBack">#667eea</color>
-    <color name="colorEndBack">#764ba2</color>
+    <color name="colorStartBack">#67002F</color>
+    <color name="colorEndBack">#000E1C</color>
 </resources>

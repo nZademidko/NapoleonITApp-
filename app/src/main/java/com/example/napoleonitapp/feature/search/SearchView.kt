@@ -1,4 +1,4 @@
-package com.example.napoleonitapp.features.search
+package com.example.napoleonitapp.feature.search
 
 import moxy.MvpView
 import moxy.viewstate.strategy.alias.Skip

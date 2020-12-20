@@ -1,4 +1,4 @@
-package com.example.napoleonitapp.features.search
+package com.example.napoleonitapp.feature.search
 
 import android.os.Bundle
 import android.view.View
@@ -8,12 +8,14 @@ import com.example.napoleonitapp.R
 import com.example.napoleonitapp.data.SettingsEvent
 import kotlinx.android.synthetic.main.fragment_search.*
 import moxy.MvpAppCompatFragment
+import moxy.ktx.moxyPresenter
 import moxy.presenter.InjectPresenter
 
 class SearchFragment : MvpAppCompatFragment(R.layout.fragment_search), SearchView {
 
-    @InjectPresenter
-    lateinit var presenter: SearchPresenter
+    val presenter: SearchPresenter by moxyPresenter {
+        SearchPresenter()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

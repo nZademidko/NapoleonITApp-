@@ -2,7 +2,7 @@ package com.example.napoleonitapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.napoleonitapp.features.main.MainFragment
+import com.example.napoleonitapp.feature.main.AllEventsFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val fragmentManager = supportFragmentManager
 
         fragmentManager.beginTransaction()
-            .add(R.id.container, MainFragment())
+            .add(R.id.container, AllEventsFragment())
             .commit()
 
     }

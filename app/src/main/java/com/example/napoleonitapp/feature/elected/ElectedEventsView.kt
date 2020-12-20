@@ -1,4 +1,4 @@
-package com.example.napoleonitapp.features.elected
+package com.example.napoleonitapp.feature.elected
 
 import moxy.MvpView
 

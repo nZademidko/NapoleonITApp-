@@ -1,7 +1,7 @@
 package com.example.napoleonitapp.data
 
 import android.os.Parcelable
-import com.example.napoleonitapp.features.search.RbTYPE
+import com.example.napoleonitapp.feature.search.RbTYPE
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize

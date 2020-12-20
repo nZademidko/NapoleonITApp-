@@ -1,11 +1,10 @@
-package com.example.napoleonitapp.features.search
+package com.example.napoleonitapp.feature.search
 
 import moxy.InjectViewState
 import moxy.MvpPresenter
 import java.lang.Exception
 
 
-@InjectViewState
 class SearchPresenter(): MvpPresenter<SearchView>() {
 
 
