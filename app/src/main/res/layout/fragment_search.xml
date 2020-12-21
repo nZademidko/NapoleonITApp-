@@ -98,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/view_background_stroke"
-                android:ems="8"
+                android:ems="5"
                 android:text="0" />
 
             <TextView
@@ -115,7 +115,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/view_background_stroke"
-                android:ems="8"
+                android:ems="5"
                 style="@style/search_editText_style"
                 android:text="10000" />
 

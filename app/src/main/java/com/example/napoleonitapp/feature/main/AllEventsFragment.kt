@@ -25,7 +25,6 @@ class AllEventsFragment : MvpAppCompatFragment(R.layout.fragment_show_events), A
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(rvAllEvents){
-
             layoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
             adapter = AllEventsAdapter(onEventClick = {
                 presenter.onEventClick(it)
