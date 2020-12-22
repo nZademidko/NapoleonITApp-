@@ -34,11 +34,11 @@ anim fragment_fade_exit
 anim fragment_fast_out_extra_slow_in
 anim fragment_open_enter
 anim fragment_open_exit
-anim layout_slide_in_row
+anim layout_slide_bottom
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
-anim slide_in_row
+anim slide_bottom
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -948,6 +948,7 @@ color colorAccent
 color colorBackgroundPurple
 color colorBlack
 color colorEndBack
+color colorMainBlue
 color colorPrimary
 color colorPrimaryDark
 color colorPurple
@@ -1561,6 +1562,8 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_iv_favorite
+drawable ic_iv_unfavorite
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_checked_circle
@@ -1699,7 +1702,6 @@ id bottom
 id bounce
 id btnExtentFindEvents
 id btnSearch
-id btnShowSelectedEvents
 id buttonPanel
 id cache_measures
 id cancel_action
@@ -1802,6 +1804,7 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id ivElected
 id ivEvent
 id jumpToEnd
 id jumpToStart
@@ -1945,6 +1948,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id swElectedEvents
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2090,10 +2094,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_all_events
 layout fragment_event_details
 layout fragment_search
-layout fragment_selected_events
-layout fragment_show_events
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2948,6 +2951,7 @@ style main_button_style
 style search_editText_style
 style search_radioButton_style
 style search_textView_style
+style switch_style
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

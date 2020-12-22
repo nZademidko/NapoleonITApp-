@@ -40,7 +40,7 @@
 21        android:allowBackup="true"
 21-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:14:9-35
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-22-->[androidx.core:core:1.3.2] C:\Users\Nikita\.gradle\caches\transforms-2\files-2.1\81112976e9a5a57f038e5cfed90af170\core-1.3.2\AndroidManifest.xml:24:18-86
+22-->[androidx.core:core:1.3.2] C:\Users\Nikita\.gradle\caches\transforms-2\files-2.1\79ee559483d346866425453a88a27286\core-1.3.2\AndroidManifest.xml:24:18-86
 23        android:debuggable="true"
 24        android:icon="@mipmap/ic_launcher"
 24-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:15:9-43

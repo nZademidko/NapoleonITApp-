@@ -1,0 +1,21 @@
+com/example/napoleonitapp/feature/allEvents/AllEventsView$$State.java
+ com.example.napoleonitapp.feature.allEvents.AllEventsView$$State
+ com.example.napoleonitapp.feature.allEvents.AllEventsView$$State$OpenDetailEventCommand
+ com.example.napoleonitapp.feature.allEvents.AllEventsView$$State$SetEventsCommand
+com/example/napoleonitapp/feature/searchEvents/SearchPresenter$$ViewStateProvider.java
+ com.example.napoleonitapp.feature.searchEvents.SearchPresenter$$ViewStateProvider
+com/example/napoleonitapp/feature/detailEvents/EventDetailsPresenter$$ViewStateProvider.java
+ com.example.napoleonitapp.feature.detailEvents.EventDetailsPresenter$$ViewStateProvider
+com/example/napoleonitapp/feature/searchEvents/SearchView$$State.java
+ com.example.napoleonitapp.feature.searchEvents.SearchView$$State
+ com.example.napoleonitapp.feature.searchEvents.SearchView$$State$BackToMainFragmentCommand
+ com.example.napoleonitapp.feature.searchEvents.SearchView$$State$ShowCountFromErrorCommand
+ com.example.napoleonitapp.feature.searchEvents.SearchView$$State$ShowCountToErrorCommand
+com/example/napoleonitapp/feature/allEvents/AllEventsPresenter$$ViewStateProvider.java
+ com.example.napoleonitapp.feature.allEvents.AllEventsPresenter$$ViewStateProvider
+com/example/napoleonitapp/BuildConfig.java
+ com.example.napoleonitapp.BuildConfig
+com/example/napoleonitapp/feature/detailEvents/EventDetailsView$$State.java
+ com.example.napoleonitapp.feature.detailEvents.EventDetailsView$$State
+ com.example.napoleonitapp.feature.detailEvents.EventDetailsView$$State$SetEventCommand
+ com.example.napoleonitapp.feature.detailEvents.EventDetailsView$$State$SetIsInElectedCommand

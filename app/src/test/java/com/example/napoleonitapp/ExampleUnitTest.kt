@@ -1,6 +1,6 @@
 package com.example.napoleonitapp
 
-import com.example.napoleonitapp.data.Event
+import com.example.napoleonitapp.data.dataClass.Event
 import org.junit.Test
 
 /**

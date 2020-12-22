@@ -53,4 +53,9 @@
         <item name="android:padding">4dp</item>
     </style>
 
+    <style name="switch_style">
+        <item name="colorControlActivated">@color/colorMainBlue</item>
+        <item name="android:colorForeground">@color/colorWhite</item>
+    </style>
+
 </resources>

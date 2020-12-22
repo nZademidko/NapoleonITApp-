@@ -2,7 +2,7 @@ package com.example.napoleonitapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.napoleonitapp.feature.main.AllEventsFragment
+import com.example.napoleonitapp.feature.allEvents.AllEventsFragment
 
 class MainActivity : AppCompatActivity() {
 
