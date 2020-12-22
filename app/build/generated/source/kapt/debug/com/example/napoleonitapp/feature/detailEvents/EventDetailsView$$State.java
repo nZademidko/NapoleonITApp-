@@ -8,8 +8,8 @@ import moxy.viewstate.strategy.AddToEndSingleStrategy;
 
 public class EventDetailsView$$State extends MvpViewState<EventDetailsView> implements EventDetailsView {
 	@Override
-	public void setEvent(Event arg0) {
-		SetEventCommand setEventCommand = new SetEventCommand(arg0);
+	public void setEvent(Event event) {
+		SetEventCommand setEventCommand = new SetEventCommand(event);
 		this.viewCommands.beforeApply(setEventCommand);
 
 		if (hasNotView()) {
@@ -17,15 +17,15 @@ public class EventDetailsView$$State extends MvpViewState<EventDetailsView> impl
 		}
 
 		for (EventDetailsView view : this.views) {
-			view.setEvent(arg0);
+			view.setEvent(event);
 		}
 
 		this.viewCommands.afterApply(setEventCommand);
 	}
 
 	@Override
-	public void setIsInElected(boolean arg0) {
-		SetIsInElectedCommand setIsInElectedCommand = new SetIsInElectedCommand(arg0);
+	public void setIsInElected(boolean isInElected) {
+		SetIsInElectedCommand setIsInElectedCommand = new SetIsInElectedCommand(isInElected);
 		this.viewCommands.beforeApply(setIsInElectedCommand);
 
 		if (hasNotView()) {
@@ -33,39 +33,39 @@ public class EventDetailsView$$State extends MvpViewState<EventDetailsView> impl
 		}
 
 		for (EventDetailsView view : this.views) {
-			view.setIsInElected(arg0);
+			view.setIsInElected(isInElected);
 		}
 
 		this.viewCommands.afterApply(setIsInElectedCommand);
 	}
 
 	public class SetEventCommand extends ViewCommand<EventDetailsView> {
-		public final Event arg0;
+		public final Event event;
 
-		SetEventCommand(Event arg0) {
+		SetEventCommand(Event event) {
 			super("setEvent", AddToEndSingleStrategy.class);
 
-			this.arg0 = arg0;
+			this.event = event;
 		}
 
 		@Override
 		public void apply(EventDetailsView mvpView) {
-			mvpView.setEvent(arg0);
+			mvpView.setEvent(event);
 		}
 	}
 
 	public class SetIsInElectedCommand extends ViewCommand<EventDetailsView> {
-		public final boolean arg0;
+		public final boolean isInElected;
 
-		SetIsInElectedCommand(boolean arg0) {
+		SetIsInElectedCommand(boolean isInElected) {
 			super("setIsInElected", AddToEndSingleStrategy.class);
 
-			this.arg0 = arg0;
+			this.isInElected = isInElected;
 		}
 
 		@Override
 		public void apply(EventDetailsView mvpView) {
-			mvpView.setIsInElected(arg0);
+			mvpView.setIsInElected(isInElected);
 		}
 	}
 }

@@ -39,8 +39,8 @@ public class SearchView$$State extends MvpViewState<SearchView> implements Searc
 	}
 
 	@Override
-	public void backToMainFragment(RbTYPE arg0) {
-		BackToMainFragmentCommand backToMainFragmentCommand = new BackToMainFragmentCommand(arg0);
+	public void backToMainFragment(RbTYPE rbTYPE) {
+		BackToMainFragmentCommand backToMainFragmentCommand = new BackToMainFragmentCommand(rbTYPE);
 		this.viewCommands.beforeApply(backToMainFragmentCommand);
 
 		if (hasNotView()) {
@@ -48,7 +48,7 @@ public class SearchView$$State extends MvpViewState<SearchView> implements Searc
 		}
 
 		for (SearchView view : this.views) {
-			view.backToMainFragment(arg0);
+			view.backToMainFragment(rbTYPE);
 		}
 
 		this.viewCommands.afterApply(backToMainFragmentCommand);
@@ -77,17 +77,17 @@ public class SearchView$$State extends MvpViewState<SearchView> implements Searc
 	}
 
 	public class BackToMainFragmentCommand extends ViewCommand<SearchView> {
-		public final RbTYPE arg0;
+		public final RbTYPE rbTYPE;
 
-		BackToMainFragmentCommand(RbTYPE arg0) {
+		BackToMainFragmentCommand(RbTYPE rbTYPE) {
 			super("backToMainFragment", SkipStrategy.class);
 
-			this.arg0 = arg0;
+			this.rbTYPE = rbTYPE;
 		}
 
 		@Override
 		public void apply(SearchView mvpView) {
-			mvpView.backToMainFragment(arg0);
+			mvpView.backToMainFragment(rbTYPE);
 		}
 	}
 }
