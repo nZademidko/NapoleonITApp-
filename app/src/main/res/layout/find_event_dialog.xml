@@ -4,22 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlack"
-    tools:context=".feature.searchEvents.SearchFragment">
+    android:padding="20dp"
+    android:background="@drawable/background_color">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:padding="20dp"
-        android:background="@drawable/layout_background_stroke"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.733">
 
         <RadioGroup
             android:id="@+id/rgSearch"
@@ -31,30 +18,30 @@
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <RadioButton
-                android:id="@+id/rbAll"
+                android:id="@+id/rbRandom"
                 style="@style/search_radioButton_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="Все"
+                android:text="Случайные"
 
 
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold" />
 
             <RadioButton
-                android:id="@+id/rbBeforeTwoWeeks"
+                android:id="@+id/rbNewer"
                 style="@style/search_radioButton_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ближайшие" />
+                android:text="Сначала ближайшие" />
 
             <RadioButton
-                android:id="@+id/rbAfterTwoWeeks"
+                android:id="@+id/rbOlder"
                 style="@style/search_radioButton_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Дальнейшие" />
+                android:text="Сначала дальнейшие" />
         </RadioGroup>
 
         <TextView
@@ -64,6 +51,7 @@
             android:layout_marginTop="30sp"
             android:background="@drawable/view_background_stroke"
             android:fontFamily="@font/avenir_bold"
+            android:gravity="center"
             android:padding="20dp"
 
             android:text="Выберите нужные настройки"
@@ -113,18 +101,32 @@
 
             <EditText
                 android:id="@+id/etCountTo"
+                style="@style/search_editText_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/view_background_stroke"
                 android:ems="5"
-                style="@style/search_editText_style"
                 android:text="10000" />
 
         </LinearLayout>
 
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnSearch"
+        style="@style/main_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:padding="20sp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="Поиск"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

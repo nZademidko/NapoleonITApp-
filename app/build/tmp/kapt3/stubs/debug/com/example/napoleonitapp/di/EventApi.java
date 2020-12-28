@@ -6,7 +6,7 @@ import java.lang.System;
 public abstract interface EventApi {
     
     @org.jetbrains.annotations.Nullable()
-    @retrofit2.http.GET(value = "public-api/v1.4/events/?expand=dates&fields=images,dates,body_text,title,favorites_count")
+    @retrofit2.http.GET(value = "public-api/v1.4/events/?expand=dates&fields=images,dates,body_text,title,favorites_count,site_url,description")
     public abstract java.lang.Object getEvents(@org.jetbrains.annotations.NotNull()
     kotlin.coroutines.Continuation<? super com.example.napoleonitapp.entity.EventResponse> p0);
 }

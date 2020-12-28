@@ -124,9 +124,9 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ni
 	android:label
 		ADDED from C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:16:9-41
 	android:roundIcon
-		ADDED from C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:17:9-52
+		ADDED from C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:17:9-46
 	android:icon
-		ADDED from C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:15:9-47
+		ADDED from C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:15:9-41
 	android:allowBackup
 		ADDED from C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:14:9-35
 	android:theme

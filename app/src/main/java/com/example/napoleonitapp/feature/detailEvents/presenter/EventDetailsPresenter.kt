@@ -29,4 +29,10 @@ class EventDetailsPresenter(
         isInElected = !isInElected
         viewState.setIsInElected(isInElected)
     }
+
+    fun onLinkClicked(){
+
+        viewState.goToLink(event.url)
+
+    }
 }

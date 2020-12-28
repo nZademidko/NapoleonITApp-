@@ -4,6 +4,7 @@ com/example/napoleonitapp/feature/allEvents/presenter/AllEventsView$$State.java
  com.example.napoleonitapp.feature.allEvents.presenter.AllEventsView$$State
  com.example.napoleonitapp.feature.allEvents.presenter.AllEventsView$$State$OpenDetailEventCommand
  com.example.napoleonitapp.feature.allEvents.presenter.AllEventsView$$State$SetEventsCommand
+ com.example.napoleonitapp.feature.allEvents.presenter.AllEventsView$$State$SetFindDialogCommand
  com.example.napoleonitapp.feature.allEvents.presenter.AllEventsView$$State$ShowLoadingCommand
 com/example/napoleonitapp/feature/allEvents/presenter/AllEventsPresenter$$ViewStateProvider.java
  com.example.napoleonitapp.feature.allEvents.presenter.AllEventsPresenter$$ViewStateProvider
@@ -11,5 +12,6 @@ com/example/napoleonitapp/BuildConfig.java
  com.example.napoleonitapp.BuildConfig
 com/example/napoleonitapp/feature/detailEvents/presenter/EventDetailsView$$State.java
  com.example.napoleonitapp.feature.detailEvents.presenter.EventDetailsView$$State
+ com.example.napoleonitapp.feature.detailEvents.presenter.EventDetailsView$$State$GoToLinkCommand
  com.example.napoleonitapp.feature.detailEvents.presenter.EventDetailsView$$State$SetEventCommand
  com.example.napoleonitapp.feature.detailEvents.presenter.EventDetailsView$$State$SetIsInElectedCommand

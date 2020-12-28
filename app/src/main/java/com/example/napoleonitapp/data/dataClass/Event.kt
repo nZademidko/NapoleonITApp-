@@ -7,4 +7,4 @@ import kotlinx.serialization.Serializable
 @Parcelize
 @Serializable
 data class Event(val name: String, val date: String, val participantCount: String,
-                 val eventImageView: String, val description: String) : Parcelable
+                 val eventImageView: String, val description: String, val url: String) : Parcelable

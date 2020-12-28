@@ -4,4 +4,4 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class SettingsEvent(val countFromText: String, val countToText: String, val rbTYPE: RbTYPE): Parcelable
+data class SettingsEvent(var countFromText: String, var countToText: String, var rbTYPE: RbTYPE): Parcelable

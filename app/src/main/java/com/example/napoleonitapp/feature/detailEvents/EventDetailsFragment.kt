@@ -1,13 +1,15 @@
 package com.example.napoleonitapp.feature.detailEvents
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.napoleonitapp.data.dataClass.Event
 import com.example.napoleonitapp.R
 import com.example.napoleonitapp.data.ElectedDaoImpl
+import com.example.napoleonitapp.data.dataClass.Event
 import com.example.napoleonitapp.feature.detailEvents.presenter.EventDetailsPresenter
 import com.example.napoleonitapp.feature.detailEvents.presenter.EventDetailsView
 import kotlinx.android.synthetic.main.fragment_event_details.*
@@ -45,8 +47,19 @@ class EventDetailsFragment : MvpAppCompatFragment(R.layout.fragment_event_detail
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        initListeners()
+    }
+
+
+    private fun initListeners(){
+
         ivElected.setOnClickListener {
             presenter.onElectedClicked()
+        }
+
+        ivLink.setOnClickListener{
+            presenter.onLinkClicked()
         }
     }
 
@@ -67,6 +80,11 @@ class EventDetailsFragment : MvpAppCompatFragment(R.layout.fragment_event_detail
         ivElected.setImageResource(
             if (isInElected) R.drawable.ic_iv_favorite else R.drawable.ic_iv_unfavorite
         )
+    }
+
+    override fun goToLink(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
     }
 
 }

@@ -37,18 +37,18 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <com.vlad1m1r.lemniscate.funny.CannabisProgressView
+        <com.vlad1m1r.lemniscate.GeronosProgressView
             android:id="@+id/pbEvents"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:duration="1000"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            app:duration="800"
             app:hasHole="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:lineColor="@color/colorMainBlue"
-            app:maxLineLength="0.8"
+            app:maxLineLength="1.0"
             app:minLineLength="0.4"
             app:sizeMultiplier="1"
             app:strokeWidth="5dp" />

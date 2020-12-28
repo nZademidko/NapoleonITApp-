@@ -3,6 +3,7 @@ package com.example.napoleonitapp.feature.allEvents.presenter
 import android.util.Log
 import com.example.napoleonitapp.data.ElectedDao
 import com.example.napoleonitapp.data.dataClass.Event
+import com.example.napoleonitapp.data.dataClass.RbTYPE
 import com.example.napoleonitapp.data.dataClass.SettingsEvent
 import com.example.napoleonitapp.domain.GetEventsUseCase
 import kotlinx.coroutines.CoroutineExceptionHandler
@@ -17,6 +18,8 @@ class AllEventsPresenter(
 ) : MvpPresenter<AllEventsView>() {
 
     lateinit var events: List<Event>
+    var settingsEvent: SettingsEvent = SettingsEvent("0", "1000000", RbTYPE.ALL)
+
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
@@ -27,31 +30,45 @@ class AllEventsPresenter(
             Log.e("tag", throwable.message, throwable)
         }) {
             events = getEventsUseCase()
-            viewState.setEvents(events)
+            sortList(events)
             viewState.showLoading(isShow = false)
         }
     }
 
-    fun applyEvents(settingsEvent: SettingsEvent) {
-        var elEvents: List<Event> = mutableListOf()
+    private fun sortList(e: List<Event>,) {
+        val elEvents: MutableList<Event> = mutableListOf()
 
-        events.forEach { event ->
+        e.forEach { event ->
             if (settingsEvent.countFromText.toInt() <= event.participantCount.toInt() && event.participantCount.toInt() <= settingsEvent.countToText.toInt()) {
-                elEvents = elEvents+event
+                elEvents.add(event)
             }
         }
+        when (settingsEvent.rbTYPE) {
+            RbTYPE.NEWER -> elEvents.sortBy { it.date }
+            RbTYPE.OLDER -> elEvents.sortByDescending { it.date }
+        }
         viewState.setEvents(elEvents)
+    }
 
+    fun applyEvents(curSettingsEvent: SettingsEvent) {
+
+        settingsEvent = curSettingsEvent
+        sortList(events)
     }
 
 
     fun onElectedEventsSwitched(isChecked: Boolean) {
-        if (isChecked) viewState.setEvents(electedDao.getAll())
-        else viewState.setEvents(events)
+        if (isChecked) sortList(electedDao.getAll())
+        else sortList(events)
     }
 
     fun onDetailEventClicked(event: Event) {
         viewState.openDetailEvent(event)
     }
+
+    fun onExtentFindClicked() {
+        viewState.setFindDialog(settingsEvent)
+    }
+
 
 }

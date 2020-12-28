@@ -2,7 +2,6 @@ package com.example.napoleonitapp.domain
 
 import com.example.napoleonitapp.data.dataClass.Event
 import com.example.napoleonitapp.di.EventApi
-import com.example.napoleonitapp.entity.EventResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -16,7 +15,8 @@ class GetEventsUseCase(private val eventApi: EventApi) {
                     date = event.dates?.get(0)?.date.toString(),
                     participantCount = event.favoritesCount.toString(),
                     eventImageView = event.images?.get(0)?.image ?: return@mapNotNull null,
-                    description = event.bodyText ?: return@mapNotNull null
+                    description = event.description ?: return@mapNotNull null,
+                    url = event.siteUrl ?: "https://kudago.com/ekb/"
                 )
             } ?: emptyList()
         }
