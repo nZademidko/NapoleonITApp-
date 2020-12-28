@@ -10,8 +10,8 @@ import moxy.viewstate.strategy.OneExecutionStateStrategy;
 
 public class EventDetailsView$$State extends MvpViewState<EventDetailsView> implements EventDetailsView {
 	@Override
-	public void setEvent(Event arg0) {
-		SetEventCommand setEventCommand = new SetEventCommand(arg0);
+	public void setEvent(Event event) {
+		SetEventCommand setEventCommand = new SetEventCommand(event);
 		this.viewCommands.beforeApply(setEventCommand);
 
 		if (hasNotView()) {
@@ -19,15 +19,15 @@ public class EventDetailsView$$State extends MvpViewState<EventDetailsView> impl
 		}
 
 		for (EventDetailsView view : this.views) {
-			view.setEvent(arg0);
+			view.setEvent(event);
 		}
 
 		this.viewCommands.afterApply(setEventCommand);
 	}
 
 	@Override
-	public void setIsInElected(boolean arg0) {
-		SetIsInElectedCommand setIsInElectedCommand = new SetIsInElectedCommand(arg0);
+	public void setIsInElected(boolean isInElected) {
+		SetIsInElectedCommand setIsInElectedCommand = new SetIsInElectedCommand(isInElected);
 		this.viewCommands.beforeApply(setIsInElectedCommand);
 
 		if (hasNotView()) {
@@ -35,15 +35,15 @@ public class EventDetailsView$$State extends MvpViewState<EventDetailsView> impl
 		}
 
 		for (EventDetailsView view : this.views) {
-			view.setIsInElected(arg0);
+			view.setIsInElected(isInElected);
 		}
 
 		this.viewCommands.afterApply(setIsInElectedCommand);
 	}
 
 	@Override
-	public void goToLink(String arg0) {
-		GoToLinkCommand goToLinkCommand = new GoToLinkCommand(arg0);
+	public void goToLink(String url) {
+		GoToLinkCommand goToLinkCommand = new GoToLinkCommand(url);
 		this.viewCommands.beforeApply(goToLinkCommand);
 
 		if (hasNotView()) {
@@ -51,54 +51,54 @@ public class EventDetailsView$$State extends MvpViewState<EventDetailsView> impl
 		}
 
 		for (EventDetailsView view : this.views) {
-			view.goToLink(arg0);
+			view.goToLink(url);
 		}
 
 		this.viewCommands.afterApply(goToLinkCommand);
 	}
 
 	public class SetEventCommand extends ViewCommand<EventDetailsView> {
-		public final Event arg0;
+		public final Event event;
 
-		SetEventCommand(Event arg0) {
+		SetEventCommand(Event event) {
 			super("setEvent", AddToEndSingleStrategy.class);
 
-			this.arg0 = arg0;
+			this.event = event;
 		}
 
 		@Override
 		public void apply(EventDetailsView mvpView) {
-			mvpView.setEvent(arg0);
+			mvpView.setEvent(event);
 		}
 	}
 
 	public class SetIsInElectedCommand extends ViewCommand<EventDetailsView> {
-		public final boolean arg0;
+		public final boolean isInElected;
 
-		SetIsInElectedCommand(boolean arg0) {
+		SetIsInElectedCommand(boolean isInElected) {
 			super("setIsInElected", AddToEndSingleStrategy.class);
 
-			this.arg0 = arg0;
+			this.isInElected = isInElected;
 		}
 
 		@Override
 		public void apply(EventDetailsView mvpView) {
-			mvpView.setIsInElected(arg0);
+			mvpView.setIsInElected(isInElected);
 		}
 	}
 
 	public class GoToLinkCommand extends ViewCommand<EventDetailsView> {
-		public final String arg0;
+		public final String url;
 
-		GoToLinkCommand(String arg0) {
+		GoToLinkCommand(String url) {
 			super("goToLink", OneExecutionStateStrategy.class);
 
-			this.arg0 = arg0;
+			this.url = url;
 		}
 
 		@Override
 		public void apply(EventDetailsView mvpView) {
-			mvpView.goToLink(arg0);
+			mvpView.goToLink(url);
 		}
 	}
 }

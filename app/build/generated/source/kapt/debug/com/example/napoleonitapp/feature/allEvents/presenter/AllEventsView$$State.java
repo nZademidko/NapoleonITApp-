@@ -11,8 +11,8 @@ import moxy.viewstate.strategy.OneExecutionStateStrategy;
 
 public class AllEventsView$$State extends MvpViewState<AllEventsView> implements AllEventsView {
 	@Override
-	public void setEvents(List<Event> arg0) {
-		SetEventsCommand setEventsCommand = new SetEventsCommand(arg0);
+	public void setEvents(List<Event> events) {
+		SetEventsCommand setEventsCommand = new SetEventsCommand(events);
 		this.viewCommands.beforeApply(setEventsCommand);
 
 		if (hasNotView()) {
@@ -20,15 +20,15 @@ public class AllEventsView$$State extends MvpViewState<AllEventsView> implements
 		}
 
 		for (AllEventsView view : this.views) {
-			view.setEvents(arg0);
+			view.setEvents(events);
 		}
 
 		this.viewCommands.afterApply(setEventsCommand);
 	}
 
 	@Override
-	public void openDetailEvent(Event arg0) {
-		OpenDetailEventCommand openDetailEventCommand = new OpenDetailEventCommand(arg0);
+	public void openDetailEvent(Event event) {
+		OpenDetailEventCommand openDetailEventCommand = new OpenDetailEventCommand(event);
 		this.viewCommands.beforeApply(openDetailEventCommand);
 
 		if (hasNotView()) {
@@ -36,15 +36,15 @@ public class AllEventsView$$State extends MvpViewState<AllEventsView> implements
 		}
 
 		for (AllEventsView view : this.views) {
-			view.openDetailEvent(arg0);
+			view.openDetailEvent(event);
 		}
 
 		this.viewCommands.afterApply(openDetailEventCommand);
 	}
 
 	@Override
-	public void showLoading(boolean arg0) {
-		ShowLoadingCommand showLoadingCommand = new ShowLoadingCommand(arg0);
+	public void showLoading(boolean isShow) {
+		ShowLoadingCommand showLoadingCommand = new ShowLoadingCommand(isShow);
 		this.viewCommands.beforeApply(showLoadingCommand);
 
 		if (hasNotView()) {
@@ -52,15 +52,15 @@ public class AllEventsView$$State extends MvpViewState<AllEventsView> implements
 		}
 
 		for (AllEventsView view : this.views) {
-			view.showLoading(arg0);
+			view.showLoading(isShow);
 		}
 
 		this.viewCommands.afterApply(showLoadingCommand);
 	}
 
 	@Override
-	public void setFindDialog(SettingsEvent arg0) {
-		SetFindDialogCommand setFindDialogCommand = new SetFindDialogCommand(arg0);
+	public void setFindDialog(SettingsEvent settingsEvent) {
+		SetFindDialogCommand setFindDialogCommand = new SetFindDialogCommand(settingsEvent);
 		this.viewCommands.beforeApply(setFindDialogCommand);
 
 		if (hasNotView()) {
@@ -68,69 +68,69 @@ public class AllEventsView$$State extends MvpViewState<AllEventsView> implements
 		}
 
 		for (AllEventsView view : this.views) {
-			view.setFindDialog(arg0);
+			view.setFindDialog(settingsEvent);
 		}
 
 		this.viewCommands.afterApply(setFindDialogCommand);
 	}
 
 	public class SetEventsCommand extends ViewCommand<AllEventsView> {
-		public final List<Event> arg0;
+		public final List<Event> events;
 
-		SetEventsCommand(List<Event> arg0) {
+		SetEventsCommand(List<Event> events) {
 			super("setEvents", AddToEndSingleStrategy.class);
 
-			this.arg0 = arg0;
+			this.events = events;
 		}
 
 		@Override
 		public void apply(AllEventsView mvpView) {
-			mvpView.setEvents(arg0);
+			mvpView.setEvents(events);
 		}
 	}
 
 	public class OpenDetailEventCommand extends ViewCommand<AllEventsView> {
-		public final Event arg0;
+		public final Event event;
 
-		OpenDetailEventCommand(Event arg0) {
+		OpenDetailEventCommand(Event event) {
 			super("openDetailEvent", OneExecutionStateStrategy.class);
 
-			this.arg0 = arg0;
+			this.event = event;
 		}
 
 		@Override
 		public void apply(AllEventsView mvpView) {
-			mvpView.openDetailEvent(arg0);
+			mvpView.openDetailEvent(event);
 		}
 	}
 
 	public class ShowLoadingCommand extends ViewCommand<AllEventsView> {
-		public final boolean arg0;
+		public final boolean isShow;
 
-		ShowLoadingCommand(boolean arg0) {
+		ShowLoadingCommand(boolean isShow) {
 			super("showLoading", AddToEndSingleStrategy.class);
 
-			this.arg0 = arg0;
+			this.isShow = isShow;
 		}
 
 		@Override
 		public void apply(AllEventsView mvpView) {
-			mvpView.showLoading(arg0);
+			mvpView.showLoading(isShow);
 		}
 	}
 
 	public class SetFindDialogCommand extends ViewCommand<AllEventsView> {
-		public final SettingsEvent arg0;
+		public final SettingsEvent settingsEvent;
 
-		SetFindDialogCommand(SettingsEvent arg0) {
+		SetFindDialogCommand(SettingsEvent settingsEvent) {
 			super("setFindDialog", OneExecutionStateStrategy.class);
 
-			this.arg0 = arg0;
+			this.settingsEvent = settingsEvent;
 		}
 
 		@Override
 		public void apply(AllEventsView mvpView) {
-			mvpView.setFindDialog(arg0);
+			mvpView.setFindDialog(settingsEvent);
 		}
 	}
 }

@@ -50,26 +50,25 @@
 26-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:17:9-46
 27        android:supportsRtl="true"
 27-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:18:9-35
-28        android:testOnly="true"
-29        android:theme="@style/AppTheme" >
-29-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:19:9-40
-30        <activity
-30-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:20:9-27:20
-31            android:name="com.example.napoleonitapp.feature.activity.MainActivity"
-31-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:20:19-64
-32            android:screenOrientation="portrait" >
-32-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:21:13-49
-33            <intent-filter>
-33-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:22:13-26:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:23:17-69
-34-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:23:25-66
-35
-36                <category android:name="android.intent.category.LAUNCHER" />
-36-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:25:17-77
-36-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:25:27-74
-37            </intent-filter>
-38        </activity>
-39    </application>
-40
-41</manifest>
+28        android:theme="@style/AppTheme" >
+28-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:19:9-40
+29        <activity
+29-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:20:9-27:20
+30            android:name="com.example.napoleonitapp.feature.activity.MainActivity"
+30-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:20:19-64
+31            android:screenOrientation="portrait" >
+31-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:21:13-49
+32            <intent-filter>
+32-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:22:13-26:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:23:17-69
+33-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:23:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:25:17-77
+35-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:25:27-74
+36            </intent-filter>
+37        </activity>
+38    </application>
+39
+40</manifest>
