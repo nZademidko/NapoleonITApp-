@@ -651,6 +651,9 @@
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
+    <dimen name="lemniscate_preferred_height">80dp</dimen>
+    <dimen name="lemniscate_preferred_width">80dp</dimen>
+    <dimen name="lemniscate_stroke_width">10dp</dimen>
     <item format="float" name="material_emphasis_disabled" type="dimen">0.38</item>
     <item format="float" name="material_emphasis_high_type" type="dimen">0.87</item>
     <item format="float" name="material_emphasis_medium" type="dimen">0.6</item>
@@ -5488,6 +5491,16 @@
     <attr format="dimension" name="horizontalOffset"/>
     <attr format="dimension" name="verticalOffset"/>
   </declare-styleable>
+    <declare-styleable name="BaseCurveProgressView">
+        <attr format="float" name="minLineLength"/>
+        <attr format="float" name="maxLineLength"/>
+        <attr format="color" name="lineColor"/>
+        <attr format="integer" name="duration"/>
+        <attr format="boolean" name="hasHole"/>
+        <attr format="dimension" name="strokeWidth"/>
+        <attr format="float" name="sizeMultiplier"/>
+        <attr format="integer" name="precision"/>
+    </declare-styleable>
     <declare-styleable name="BottomAppBar">
     <!-- Background for the BottomAppBar. -->
     <attr name="backgroundTint"/>
@@ -6833,6 +6846,12 @@
         <attr format="reference" name="fastScrollVerticalTrackDrawable"/>
         <attr format="reference" name="fastScrollHorizontalThumbDrawable"/>
         <attr format="reference" name="fastScrollHorizontalTrackDrawable"/>
+    </declare-styleable>
+    <declare-styleable name="RouletteCurveProgressView">
+        <attr format="float" name="radiusFixed"/>
+        <attr format="float" name="radiusMoving"/>
+        <attr format="float" name="distanceFromCenter"/>
+        <attr format="float" name="numberOfCycles"/>
     </declare-styleable>
     <declare-styleable name="ScrimInsetsFrameLayout">
     <attr format="color|reference" name="insetForeground"/>

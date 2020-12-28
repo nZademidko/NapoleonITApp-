@@ -19,13 +19,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.733">
 
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvAllEvents"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layoutAnimation="@anim/layout_slide_bottom"
@@ -35,7 +36,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+        <com.vlad1m1r.lemniscate.funny.CannabisProgressView
+            android:id="@+id/pbEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:duration="1000"
+            app:hasHole="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:lineColor="@color/colorMainBlue"
+            app:maxLineLength="0.8"
+            app:minLineLength="0.4"
+            app:sizeMultiplier="1"
+            app:strokeWidth="5dp" />
+
         <View
+            android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorWhite"
@@ -71,13 +90,13 @@
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/swElectedEvents"
-                    android:padding="16dp"
-                    app:switchMinWidth="60dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:padding="16dp"
                     android:scaleX="1.7"
                     android:scaleY="1.7"
-                    android:theme="@style/switch_style" />
+                    android:theme="@style/switch_style"
+                    app:switchMinWidth="60dp" />
 
             </LinearLayout>
 

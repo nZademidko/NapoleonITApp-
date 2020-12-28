@@ -42,20 +42,20 @@
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 22-->[androidx.core:core:1.3.2] C:\Users\Nikita\.gradle\caches\transforms-2\files-2.1\79ee559483d346866425453a88a27286\core-1.3.2\AndroidManifest.xml:24:18-86
 23        android:debuggable="true"
-24        android:icon="@mipmap/ic_launcher"
-24-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:15:9-43
+24        android:icon="@drawable/ic_event_logo"
+24-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:15:9-47
 25        android:label="@string/app_name"
 25-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:16:9-41
-26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:17:9-54
+26        android:roundIcon="@drawable/ic_event_logo"
+26-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:17:9-52
 27        android:supportsRtl="true"
 27-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:18:9-35
 28        android:theme="@style/AppTheme" >
 28-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:19:9-40
 29        <activity
 29-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:20:9-27:20
-30            android:name="com.example.napoleonitapp.MainActivity"
-30-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:20:19-47
+30            android:name="com.example.napoleonitapp.feature.activity.MainActivity"
+30-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:20:19-64
 31            android:screenOrientation="portrait" >
 31-->C:\Users\Nikita\AndroidStudioProjects\NapoleonITApp\app\src\main\AndroidManifest.xml:21:13-49
 32            <intent-filter>
